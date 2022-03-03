@@ -39,9 +39,10 @@ Create a POC
 
 Possibilities
 
-Hub - Spoke model?
+Hub - Spoke model = Done
 Multiple environments? Dev - Staging - Prod?
-Multi region?
+Multiple Spokes or multiple workspaces in AKS?
+Multi region? For DR?
 AKS or ACI(Container Instance Services)?
 Azure container registry or docker hub?
 Helm Chart?
