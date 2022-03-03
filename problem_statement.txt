@@ -55,3 +55,4 @@ Monitoring of the containers?
     Azure monitor?
 Expose to the internet - application gateway? Public LB with NSG?
 Do I need Azure DNS??
+USE TERRAFORM DOCS FOR README

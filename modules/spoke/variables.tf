@@ -22,3 +22,18 @@ variable "default_subnet_address" {
   type        = list(any)
   description = "Mgt01 Subnet prefix"
 }
+
+variable "hub_rg_name" {
+  type        = string
+  description = "Hub resource group name to be used in vnet peering"
+}
+
+variable "hub_vnet_name" {
+  type        = string
+  description = "Hub vnet name to be used in vnet peering"
+}
+
+variable "hub_vnet_id" {
+  type        = string
+  description = "Hub vnet id to be used in vnet peering"
+}

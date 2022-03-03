@@ -50,22 +50,22 @@ resource "azurerm_subnet_network_security_group_association" "default" {
 #   route_table_id = azurerm_route_table.default.id
 # }
 
-# resource "azurerm_virtual_network_peering" "hub-to-spoke" {
-#   name                         = "hub-to-${azurerm_resource_group.this.name}-peering"
-#   resource_group_name          = module.hub....
-#   virtual_network_name         =
-#   remote_virtual_network_id    = azurerm_virtual_network.efficient_ip_vnet.id
-#   allow_gateway_transit        = true
-#   allow_virtual_network_access = true
-#   use_remote_gateways          = false
-# }
+resource "azurerm_virtual_network_peering" "hub-to-spoke" {
+  name                         = "hub-to-${azurerm_resource_group.this.name}-peering"
+  resource_group_name          = var.hub_rg_name
+  virtual_network_name         = var.hub_vnet_name
+  remote_virtual_network_id    = azurerm_virtual_network.this.id
+  allow_gateway_transit        = true
+  allow_virtual_network_access = true
+  use_remote_gateways          = false
+}
 
-# resource "azurerm_virtual_network_peering" "spoke-to-hub" {
-#   name                         = "${azurerm_resource_group.this.name}-to-hub-peering"
-#   resource_group_name          = azurerm_resource_group.this.name
-#   virtual_network_name         = azurerm_virtual_network.this.name
-#   remote_virtual_network_id    =
-#   allow_gateway_transit        = true
-#   allow_virtual_network_access = true
-#   use_remote_gateways          = false
-# }
+resource "azurerm_virtual_network_peering" "spoke-to-hub" {
+  name                         = "${azurerm_resource_group.this.name}-to-hub-peering"
+  resource_group_name          = azurerm_resource_group.this.name
+  virtual_network_name         = azurerm_virtual_network.this.name
+  remote_virtual_network_id    = var.hub_vnet_id
+  allow_gateway_transit        = true
+  allow_virtual_network_access = true
+  use_remote_gateways          = false
+}
