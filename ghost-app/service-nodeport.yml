@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: ghost-app
 spec:
+  type: NodePort
   selector:
     app: ghost-app
   ports:
