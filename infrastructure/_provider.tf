@@ -6,7 +6,7 @@ terraform {
     }
   }
   # backend "azurerm" {
-  #   subscription_id      = "2a30ecb6-4675-400e-9599-90e6ff348242"
+  #   subscription_id      = ""
   #   resource_group_name  = "terraform-backend"
   #   storage_account_name = "echoblogtfstate"
   #   container_name       = "tfstate"
