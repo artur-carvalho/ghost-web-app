@@ -20,6 +20,7 @@ No modules.
 |------|------|
 | [azurerm_network_security_group.default](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group) | resource |
 | [azurerm_resource_group.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
+| [azurerm_subnet.appgw](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet) | resource |
 | [azurerm_subnet.default](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet) | resource |
 | [azurerm_subnet_network_security_group_association.default](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet_network_security_group_association) | resource |
 | [azurerm_virtual_network.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network) | resource |
@@ -30,7 +31,8 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_default_subnet_address"></a> [default\_subnet\_address](#input\_default\_subnet\_address) | Mgt01 Subnet prefix | `list(any)` | n/a | yes |
+| <a name="input_app_gw_subnet"></a> [app\_gw\_subnet](#input\_app\_gw\_subnet) | Application Gateway prefix | `list(string)` | n/a | yes |
+| <a name="input_default_subnet_address"></a> [default\_subnet\_address](#input\_default\_subnet\_address) | Default Subnet prefix | `list(string)` | n/a | yes |
 | <a name="input_hub_rg_name"></a> [hub\_rg\_name](#input\_hub\_rg\_name) | Hub resource group name to be used in vnet peering | `string` | n/a | yes |
 | <a name="input_hub_vnet_id"></a> [hub\_vnet\_id](#input\_hub\_vnet\_id) | Hub vnet id to be used in vnet peering | `string` | n/a | yes |
 | <a name="input_hub_vnet_name"></a> [hub\_vnet\_name](#input\_hub\_vnet\_name) | Hub vnet name to be used in vnet peering | `string` | n/a | yes |
@@ -41,4 +43,8 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_appgw_subnet_id"></a> [appgw\_subnet\_id](#output\_appgw\_subnet\_id) | n/a |
+| <a name="output_rg_location"></a> [rg\_location](#output\_rg\_location) | n/a |
+| <a name="output_rg_name"></a> [rg\_name](#output\_rg\_name) | n/a |

@@ -1,2 +1,2 @@
-# azure-tech-assignment
-This is the repository of the technical assignment
+# Ghost Web App
+This repository deploys an azure kubernetes cluster with the ghost web application.
