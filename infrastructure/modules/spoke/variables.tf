@@ -19,8 +19,13 @@ variable "tags" {
 }
 
 variable "default_subnet_address" {
-  type        = list(any)
-  description = "Mgt01 Subnet prefix"
+  type        = list(string)
+  description = "Default Subnet prefix"
+}
+
+variable "app_gw_subnet" {
+  type        = list(string)
+  description = "Application Gateway prefix"
 }
 
 variable "hub_rg_name" {

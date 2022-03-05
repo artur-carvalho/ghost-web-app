@@ -15,7 +15,7 @@ variable "vnet_address_space" {
 
 variable "default_subnet_address" {
   type        = list(any)
-  description = "Mgt01 Subnet prefix"
+  description = "Default Subnet prefix"
 }
 
 variable "tags" {

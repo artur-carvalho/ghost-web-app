@@ -19,6 +19,13 @@ resource "azurerm_subnet" "default" {
   address_prefixes     = var.default_subnet_address
 }
 
+resource "azurerm_subnet" "appgw" {
+  name                 = "appgw"
+  resource_group_name  = azurerm_resource_group.this.name
+  virtual_network_name = azurerm_virtual_network.this.name
+  address_prefixes     = var.app_gw_subnet
+}
+
 resource "azurerm_network_security_group" "default" {
   name                = "${azurerm_resource_group.this.name}-nsg"
   location            = azurerm_resource_group.this.location
@@ -55,7 +62,7 @@ resource "azurerm_virtual_network_peering" "hub-to-spoke" {
   resource_group_name          = var.hub_rg_name
   virtual_network_name         = var.hub_vnet_name
   remote_virtual_network_id    = azurerm_virtual_network.this.id
-  allow_gateway_transit        = true
+  allow_gateway_transit        = false
   allow_virtual_network_access = true
   use_remote_gateways          = false
 }
@@ -65,7 +72,7 @@ resource "azurerm_virtual_network_peering" "spoke-to-hub" {
   resource_group_name          = azurerm_resource_group.this.name
   virtual_network_name         = azurerm_virtual_network.this.name
   remote_virtual_network_id    = var.hub_vnet_id
-  allow_gateway_transit        = true
+  allow_gateway_transit        = false
   allow_virtual_network_access = true
   use_remote_gateways          = false
 }
