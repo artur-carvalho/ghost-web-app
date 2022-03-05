@@ -23,6 +23,7 @@ resource "azurerm_kubernetes_cluster" "ghost" {
     subnet_id = var.appgw_subnet_id
   }
 
+# Integration with Azure Monitor
   oms_agent {
     log_analytics_workspace_id = var.la_workspace_id
   }
