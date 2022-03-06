@@ -1,6 +1,6 @@
 LOCATION="westeurope"
 RESOURCE_GROUP_NAME="terraform-backend"
-STORAGE_ACCOUNT_NAME="echoblogtfstate"
+STORAGE_ACCOUNT_NAME="pocghosttfstate"
 CONTAINER_NAME="tfstate"
 
 # Create resource group

@@ -2,6 +2,7 @@ module "west-eu-spoke-prd-01" {
   source                 = "./modules/spoke"
   rg_name                = "poc-ghost-spoke-rg01"
   location               = "westeurope"
+  environment            = "prod"
   vnet_address_space     = ["192.168.2.0/24"]
   default_subnet_address = ["192.168.2.0/26"]
   app_gw_subnet          = ["192.168.2.64/26"]

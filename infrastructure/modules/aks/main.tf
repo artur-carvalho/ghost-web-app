@@ -1,8 +1,8 @@
 resource "azurerm_kubernetes_cluster" "ghost" {
-  name                = "ghost-k8s"
+  name                = "ghost-aks-${var.environment}"
   location            = var.location
   resource_group_name = var.rg_name
-  dns_prefix          = "ghost-k8s"
+  dns_prefix          = "ghost-aks-${var.environment}"
   tags                = var.tags
 
   default_node_pool {
@@ -33,3 +33,19 @@ resource "azurerm_kubernetes_cluster" "ghost" {
     network_plugin    = "azure"
   }
 }
+
+# data "azurerm_resource_group" "node_resource_group" {
+#   name = azurerm_kubernetes_cluster.k8s.node_resource_group
+#          depends_on = [
+#      azurerm_kubernetes_cluster.k8s
+#   ]
+# }
+
+# resource "azurerm_role_assignment" "node_infrastructure_update_scale_set" {
+#   principal_id         = azurerm_kubernetes_cluster.k8s.kubelet_identity[0].object_id
+#   scope                = data.azurerm_resource_group.node_resource_group.id
+#   role_definition_name = "Virtual Machine Contributor"
+#            depends_on = [
+#      azurerm_kubernetes_cluster.k8s
+#   ]
+# }

@@ -23,3 +23,8 @@ variable "la_workspace_id" {
   description = "Log analytics workspace id"
 }
 
+variable "environment" {
+  type        = string
+  description = "Environment Name"
+}
+

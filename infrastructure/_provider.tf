@@ -8,7 +8,7 @@ terraform {
   # backend "azurerm" {
   #   subscription_id      = ""
   #   resource_group_name  = "terraform-backend"
-  #   storage_account_name = "echoblogtfstate"
+  #   storage_account_name = "pocghosttfstate"
   #   container_name       = "tfstate"
   #   key                  = "terraform.state"
   # }
