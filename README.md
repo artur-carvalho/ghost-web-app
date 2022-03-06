@@ -8,6 +8,7 @@
 - Terraform v.1.0.11
 - [Terraform-Docs](https://terraform-docs.io/)
 - Azure DevOps
+- GitHub
 
 ## Module documentation
 
@@ -23,3 +24,7 @@
 4. Commit your Changes ( `git commit -m 'Add some AmazingFeature'` )
 5. Push to the Branch ( `git push origin AmazingFeature` )
 6. Open a Pull Request to main
+
+## Infra Documentation
+
+![hub-spoke](/docs/hub-spoke.png)
