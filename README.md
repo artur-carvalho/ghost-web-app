@@ -28,3 +28,11 @@
 ## Infra Documentation
 
 ![hub-spoke](/docs/hub-spoke.png)
+
+## AKS Structure
+
+![aks-structure](/docs/aks-structure.png)
+
+## Code Structure
+
+![code-structure](/docs/code-structure.png)
