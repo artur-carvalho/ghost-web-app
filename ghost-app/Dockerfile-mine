@@ -1,3 +1,0 @@
-FROM ghost:latest
-
-COPY source/theme-whatever /whatever

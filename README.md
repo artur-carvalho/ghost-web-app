@@ -16,14 +16,13 @@
 [Hub Module Readme](/infrastructure/modules/hub/README.md)
 [Spoke Module Readme](/infrastructure/modules/spoke/README.md)
 
-## Getting Started
+## Contribute
 
-1. To contribute:
-2. Clone the Project
-3. Create your Branch ( `git checkout -b AmazingFeature` )
-4. Commit your Changes ( `git commit -m 'Add some AmazingFeature'` )
-5. Push to the Branch ( `git push origin AmazingFeature` )
-6. Open a Pull Request to main
+1. Clone the Project
+2. Create your Branch ( `git checkout -b AmazingFeature` )
+3. Commit your Changes ( `git commit -m 'Add some AmazingFeature'` )
+4. Push to the Branch ( `git push origin AmazingFeature` )
+5. Open a Pull Request to main
 
 ## Infra Documentation
 
