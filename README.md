@@ -35,3 +35,11 @@
 ## Code Structure
 
 ![code-structure](/docs/code-structure.png)
+
+## Azure DevOps Pipeline
+
+- Create Azure DevOps project
+- Integrate with this repository
+- Install Terraform extension on Azure DevOps
+- Create service connection with name demo-svc
+- Create ADO Pipeline based on existing yml .ci/pipeline.yml
