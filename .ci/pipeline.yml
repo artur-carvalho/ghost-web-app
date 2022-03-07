@@ -53,27 +53,25 @@ stages:
               environmentServiceNameAzureRM: ""
               workingDirectory: $(System.DefaultWorkingDirectory)/infrastructure/
 
-
 # Deploy AKS Application
 
-jobs:
-  - job: aks_deploy
-    steps:
-          - task: AzureCLI@2
-            displayName: 'Deploy Ghost to AKS Cluster'
-            inputs:
-              azureSubscription: 'demo-svc'
-              scriptType: bash
-              scriptLocation: inlineScript
-              addSpnToEnvironment: true
-              inlineScript: |
-                #!/usr/bin/env bash
-                set -x
+      - job: aks_deploy
+        steps:
+              - task: AzureCLI@2
+                displayName: 'Deploy Ghost to AKS Cluster'
+                inputs:
+                  azureSubscription: 'demo-svc'
+                  scriptType: bash
+                  scriptLocation: inlineScript
+                  addSpnToEnvironment: true
+                  inlineScript: |
+                    #!/usr/bin/env bash
+                    set -x
 
-                AKS_RG="poc-ghost-spoke-rg01"
-                AKS_NAME="ghost-aks-prod"
+                    AKS_RG="poc-ghost-spoke-rg01"
+                    AKS_NAME="ghost-aks-prod"
 
-                # Get AKS Credentials
-                az aks get-credentials -g $AKS_RG -n $AKS_NAME --admin
+                    # Get AKS Credentials
+                    az aks get-credentials -g $AKS_RG -n $AKS_NAME --admin
 
-                kubectl create -f https://raw.githubusercontent.com/artur-carvalho/ghost-web-app/main/ghost-app/deployment.yml
+                    kubectl create -f https://raw.githubusercontent.com/artur-carvalho/ghost-web-app/main/ghost-app/deployment.yml
