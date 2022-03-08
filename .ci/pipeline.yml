@@ -76,4 +76,4 @@ stages:
                     az aks get-credentials -g $AKS_RG -n $AKS_NAME --admin
 
                     kubectl create namespace ghost
-                    kubectl create -f https://raw.githubusercontent.com/artur-carvalho/ghost-web-app/main/ghost-app/deployment.yml --namespace=ghost
+                    kubectl create -f https://raw.githubusercontent.com/artur-carvalho/ghost-web-app/main/aks/all-in-one.yml --namespace=ghost
