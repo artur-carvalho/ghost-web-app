@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: ghost-app
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: ghost-app
   ports:
   - protocol: TCP
-    port: 3001
+    port: 80
     targetPort: 2368

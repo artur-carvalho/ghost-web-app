@@ -5,8 +5,8 @@ trigger:
     include:
       - main
 
-pool:
-  vmImage: "ubuntu-20.04"
+# pool:
+#   vmImage: "ubuntu-20.04"
 
 variables: []
 
@@ -75,4 +75,5 @@ stages:
                     # Get AKS Credentials
                     az aks get-credentials -g $AKS_RG -n $AKS_NAME --admin
 
-                    kubectl create -f https://raw.githubusercontent.com/artur-carvalho/ghost-web-app/main/ghost-app/deployment.yml
+                    kubectl create namespace ghost
+                    kubectl create -f https://raw.githubusercontent.com/artur-carvalho/ghost-web-app/main/ghost-app/deployment.yml --namespace=ghost

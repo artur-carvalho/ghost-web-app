@@ -2,7 +2,6 @@ module "west-eu-spoke-prd-01" {
   source                 = "./modules/spoke"
   rg_name                = "poc-ghost-spoke-rg01"
   location               = "westeurope"
-  environment            = "prod"
   vnet_address_space     = ["192.168.2.0/24"]
   default_subnet_address = ["192.168.2.0/26"]
   app_gw_subnet          = ["192.168.2.64/26"]
@@ -21,6 +20,7 @@ module "ghost-aks-prd-01" {
   location        = module.west-eu-spoke-prd-01.rg_location
   appgw_subnet_id = module.west-eu-spoke-prd-01.appgw_subnet_id
   la_workspace_id = module.west-eu-hub-01.la_workspace_id
+  environment     = "prod"
   tags = {
     "Purporse"    = "Azure Assessment"
     "Application" = "DR - Ghost"

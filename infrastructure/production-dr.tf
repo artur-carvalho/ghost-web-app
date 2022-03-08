@@ -21,6 +21,7 @@
 #   location        = module.west-us-spoke-prd-02-dr.rg_location
 #   appgw_subnet_id = module.west-us-spoke-prd-02-dr.appgw_subnet_id
 #   la_workspace_id = module.west-eu-hub-01.la_workspace_id
+#   environment     = "dr"
 #   tags = {
 #     "Purporse"    = "Azure Assessment"
 #     "Application" = "DR - Ghost"

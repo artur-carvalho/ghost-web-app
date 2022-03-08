@@ -28,3 +28,10 @@ spec:
         ports:
         - containerPort: 2368
           name: ghost-app
+        volumeMounts:
+        - name: azure-managed-disk
+          mountPath: /var/lib/ghost/content/
+      volumes:
+      - name: azure-managed-disk
+        persistentVolumeClaim:
+          claimName: azure-managed-disk

@@ -3,7 +3,6 @@
 #   source                 = "./modules/spoke"
 #   rg_name                = "poc-ghost-spoke-rg01"
 #   location               = "westeurope"
-#   environment            = "staging"
 #   vnet_address_space     = ["192.168.3.0/24"]
 #   default_subnet_address = ["192.168.3.0/26"]
 #   app_gw_subnet          = ["192.168.3.64/26"]
@@ -22,6 +21,7 @@
 #   location        = module.west-eu-spoke-01.rg_location
 #   appgw_subnet_id = module.west-eu-spoke-01.appgw_subnet_id
 #   la_workspace_id = module.west-eu-hub-01.la_workspace_id
+#   environment     = "staging"
 #   tags = {
 #     "Purporse"    = "Azure Assessment"
 #     "Application" = "DR - Ghost"
