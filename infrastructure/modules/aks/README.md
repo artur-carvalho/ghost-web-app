@@ -25,6 +25,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_appgw_subnet_id"></a> [appgw\_subnet\_id](#input\_appgw\_subnet\_id) | Application gateway subnet id | `string` | n/a | yes |
+| <a name="input_environment"></a> [environment](#input\_environment) | Environment Name | `string` | n/a | yes |
 | <a name="input_la_workspace_id"></a> [la\_workspace\_id](#input\_la\_workspace\_id) | Log analytics workspace id | `string` | n/a | yes |
 | <a name="input_location"></a> [location](#input\_location) | Location to deploy | `string` | n/a | yes |
 | <a name="input_rg_name"></a> [rg\_name](#input\_rg\_name) | Resource group name | `string` | n/a | yes |
