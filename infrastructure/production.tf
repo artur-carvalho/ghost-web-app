@@ -13,7 +13,7 @@ module "west-eu-spoke-prd-01" {
     "Application" = "Ghost"
   }
   depends_on = [
-    west-eu-hub-01
+    module.west-eu-hub-01
   ]
 }
 
