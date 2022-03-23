@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "function_app" {
-  name                     = "functionsappsa"
+  name                     = "funcappghostwebapp"
   resource_group_name      = azurerm_resource_group.this.name
   location                 = azurerm_resource_group.this.location
   account_tier             = "Standard"
