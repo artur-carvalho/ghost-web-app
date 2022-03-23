@@ -25,4 +25,7 @@ module "ghost-aks-prd-01" {
     "Purporse"    = "Azure Assessment"
     "Application" = "DR - Ghost"
   }
+  depends_on = [
+    module.west-eu-spoke-prd-01
+  ]
 }
