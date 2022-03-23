@@ -12,6 +12,9 @@ module "west-eu-spoke-prd-01" {
     "Purporse"    = "Azure Assessment"
     "Application" = "Ghost"
   }
+  depends_on = [
+    west-eu-hub-01
+  ]
 }
 
 module "ghost-aks-prd-01" {
